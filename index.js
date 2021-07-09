@@ -10,7 +10,7 @@ var attempt = 0;
 
 document.querySelector(
   'h4'
-).textContent = `Hoşgeldin ${user} Lütfen gerekli alanları doldur..`;
+).textContent = `Hoşgeldin ${user}. Lütfen gerekli alanları doldur..`;
 // document.querySelector('#balance').textContent = `Bakiye: ${balance1} TL`;
 
 //Button Control
