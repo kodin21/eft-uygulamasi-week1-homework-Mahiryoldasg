@@ -13,6 +13,7 @@ document.querySelector(
 ).textContent = `Hoşgeldin ${user} Lütfen gerekli alanları doldur..`;
 // document.querySelector('#balance').textContent = `Bakiye: ${balance1} TL`;
 
+//Button Control
 let submit = document.querySelector('button');
 let isDisabled = () => {
   if (amount.value && value) {
@@ -35,13 +36,13 @@ receiver.addEventListener('change', () => {
   isDisabled();
 });
 
-//miktar
+//Money Amount
 let amount = document.querySelector('input[type=number]');
 amount.addEventListener('change', () => {
   isDisabled();
 });
 
-//Gönderen Hesap
+//Sender Account
 let sender = document.querySelectorAll('select')[0];
 sender.addEventListener('change', (e) => {
   if (e.target.value === 'Hesap 1') {
@@ -65,6 +66,8 @@ sender.addEventListener('change', (e) => {
     document.querySelector('#balance').textContent = 'Hesap Seçiniz..';
   }
 });
+
+//Submit Handler
 const handleSubmit = (e) => {
   e.preventDefault();
   console.log(amount.value);
@@ -88,11 +91,11 @@ const handleSubmit = (e) => {
     }
   }
 };
-//onSubmit
+
 let form = document.querySelector('.form');
 form.addEventListener('submit', handleSubmit);
 
-//timer setup
+//Timer Setup
 var timeleft = 120;
 var downloadTimer = setInterval(function () {
   if (timeleft <= 0) {
