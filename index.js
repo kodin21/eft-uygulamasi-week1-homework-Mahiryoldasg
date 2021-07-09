@@ -39,6 +39,9 @@ receiver.addEventListener('change', () => {
 //Money Amount
 let amount = document.querySelector('input[type=number]');
 amount.addEventListener('change', () => {
+  if (amount.value == '') {
+    submit.disabled = true;
+  }
   isDisabled();
 });
 
